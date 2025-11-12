@@ -1,0 +1,5 @@
+./node_modules
+/server1/node_modules
+/server2/node_modules
+/server3/node_modules
+/admin/node_modules
