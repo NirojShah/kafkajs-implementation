@@ -9,7 +9,18 @@ const kafka = new Kafka({
 });
 
 const producer = kafka.producer();
-await producer.connect();
+
+const run = async () => {
+  await producer.connect();
+};
+
+run().catch(console.error);
+
+process.on("SIGINT", async () => {
+  console.log("Disconnecting consumer...");
+  await consumer.disconnect();
+  process.exit(0);
+});
 
 const app = express();
 
@@ -36,7 +47,7 @@ app.post("/", async (req, res) => {
         value: JSON.stringify({
           to: "abc@xyz.com",
           content: "order placed successfully for item",
-          order_id:"xyz"
+          order_id: "xyz",
         }),
       },
     ],
