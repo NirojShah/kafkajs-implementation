@@ -5,16 +5,17 @@ import { Kafka } from "kafkajs";
 const kafka = new Kafka({
   clientId: "e-comm",
   brokers: ["localhost:9092"],
+  connectionTimeout: 600,
 });
 
 const producer = kafka.producer();
+await producer.connect();
 
 const app = express();
 
 app.post("/", async (req, res) => {
-  await producer.connect();
   await producer.send({
-    key:"order",
+    key: "order",
     topic: "order-placed",
     messages: [
       {
@@ -22,6 +23,20 @@ app.post("/", async (req, res) => {
           order_id: "xyz",
           item_qnt: 10,
           item_id: 1,
+        }),
+      },
+    ],
+  });
+
+  await producer.send({
+    key: "order-mail",
+    topic: "initiate-confirmation-mail",
+    messages: [
+      {
+        value: JSON.stringify({
+          to: "abc@xyz.com",
+          content: "order placed successfully for item",
+          order_id:"xyz"
         }),
       },
     ],
