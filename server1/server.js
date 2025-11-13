@@ -18,7 +18,7 @@ run().catch(console.error);
 
 process.on("SIGINT", async () => {
   console.log("Disconnecting consumer...");
-  await consumer.disconnect();
+  await producer.disconnect();
   process.exit(0);
 });
 
