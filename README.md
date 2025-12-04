@@ -2,7 +2,7 @@
 
 A learning project demonstrating Apache Kafka integration with Node.js using KafkaJS client library. This project showcases the fundamental concepts of message streaming including producers, consumers, and admin operations.
 
-## ðŸ“‹ Prerequisites
+## ‹ Prerequisites
 
 Before running this project, ensure you have the following installed:
 
@@ -10,7 +10,7 @@ Before running this project, ensure you have the following installed:
 - Docker and Docker Compose
 - npm or yarn package manager
 
-## ðŸš€ Getting Started
+## Getting Started
 
 ### Installation
 
@@ -97,4 +97,5 @@ This project is open source and available for learning purposes.
 ---
 
  Star this repository if you find it helpful for learning Kafka!
+
 
