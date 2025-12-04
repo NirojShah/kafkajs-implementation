@@ -30,7 +30,7 @@ npm install
 docker-compose up -d
 ```
 
-## ðŸ“ Project Structure
+## 1. Project Structure
 
 ```
 kafkajs-implementation/
@@ -42,7 +42,7 @@ kafkajs-implementation/
 â””â”€â”€ README.md
 ```
 
-## ðŸ”§ Usage
+## 2. Usage
 
 ### Running the Producer
 
@@ -62,14 +62,14 @@ node consumer/index.js
 node admin/index.js
 ```
 
-## ðŸ› ï¸ Technologies Used
+## 3. Technologies Used
 
 - **Node.js** - Runtime environment
 - **KafkaJS** - Modern Apache Kafka client for Node.js
 - **Docker** - Containerization for Kafka and Zookeeper
 - **Apache Kafka** - Distributed streaming platform
 
-## ðŸ“š Learning Objectives
+## 4. Learning Objectives
 
 This project covers:
 - Setting up Kafka with Docker
@@ -78,22 +78,23 @@ This project covers:
 - Implementing message consumers
 - Understanding message streaming patterns
 
-## ðŸ› Troubleshooting
+## 5. Troubleshooting
 
 If you encounter connection issues:
 - Ensure Docker containers are running: `docker-compose ps`
 - Check Kafka logs: `docker-compose logs kafka`
 - Verify Kafka is accessible on `localhost:9092`
 
-## ðŸ“ License
+## 6. License
 
 This project is open source and available for learning purposes.
 
-## ðŸ‘¤ Author
+## 7. Author
 
 **Niroj Shah**
 - GitHub: [@NirojShah](https://github.com/NirojShah)
 
 ---
 
-â­ Star this repository if you find it helpful for learning Kafka!
+ Star this repository if you find it helpful for learning Kafka!
+
